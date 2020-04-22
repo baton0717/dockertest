@@ -4,9 +4,9 @@
 
 Copy the sources to your docker host and build the container, and to run.
 ```
-	docker build --rm -t baton0717/ubuntu .
+	docker build --rm -t baton0717/dockertest .
 	mkdir ~/df
-	winpty docker run -it --name n1 -v ~/df:/var/www/html -p 80:80 baton0717/ubuntu
+	winpty docker run -it --name n1 -p 80:80 baton0717/dockertest
 
 ```
 Get the port that the container is listening on:
@@ -14,7 +14,7 @@ Get the port that the container is listening on:
 ```
 # docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-ea9ccebf7125        baton0717/ubuntu    "/bin/bash"         About a minute ago   Up About a minute                       c1
+ea9ccebf7125        baton0717/dockertest    "/bin/bash"         About a minute ago   Up About a minute                       c1
 
 ```
 
